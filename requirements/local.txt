@@ -1,0 +1,12 @@
+-r test.txt
+
+django-taggit==0.12.2
+
+#django-debug-toolbar==1.2.1
+
+# Depurador de consultas diversas para django 1.7, version prueba
+-e git+https://github.com/django-debug-toolbar/django-debug-toolbar.git#egg=django-debug-toolbar
+Sphinx
+
+# Time-zone field para django 1.7
+-e git+https://github.com/anhtran/django-timezone-field.git@develop#egg=django-timezone-field

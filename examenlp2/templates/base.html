@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="es">
+    <head>
+        <title>{% block title %}examenlp2{% endblock title %}</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+        <link rel="stylesheet" href= "{% static 'css/estilos.css' %}"/>
+    </head>
+    <body>
+        <header id="yo" class="Header">
+            <nav class="MainMenu">
+                <ul class="MainMenu-list">
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#yo">Yo</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#perfil">Perfil</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#trabajo">Mi trabajo</a>
+                    </li>
+                    <li class="MainMenu-item">
+                        <a class="MainMenu-link" href="#contacto">Contáctame</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <figure class="Header-imageContainer">
+                <img src= "{% static 'images/avatar.jpg' %}" alt="@DanteCunurana" class="Header-image"/>
+                <figcaption class="Header-description">
+                    <a href="http://github.com/danterrc/" target="_blank" class="Header-link">@DanteCunurana</a>
+                </figcaption>
+                <p class="Header-name">Dante Cunurana Mamani</p>
+            </figure>
+        </header>
+        <section id="perfil" class="Profile">
+            <div class="u-containerDefault"> 
+                <h2 class="Profile-title u-title">Mi Perfil</h2>
+
+                <p class="Profile-description">Puedes <strong>visitar</strong> mis redes <span class="Profile-span">sociales</span> si quieres <em>seguirme</em></p>
+
+                <a class="Profile-link"
+                    href="http://github.com/danterrc/">DanteCunurana</a>
+
+                <a class="Profile-link"
+                    href="http://github.com/danterrc/">DanteCunurana</a>
+
+                <a class="Profile-link"
+                    href="http://github.com/danterrc/">DanteCunurana</a>
+            </div>
+        </section>
+        <section id="trabajo" class="Work">
+            <div class="u-containerDefault"> 
+                <h2 class="Work-title u-title">Mi Trabajo</h2>
+            </div>
+                <article class="Work-item">
+                    <figure class="Work-imageContainer">
+                        <img class="Work-image" src="{% static 'images/proyecto.jpg' %}" alt="Mejorando.la"/>
+                        <figcaption>Sitio de Mejorando.la</figcaption>
+                    </figure>
+                </article>
+                <article class="Work-item">
+                    <figure class="Work-imageContainer">
+                        <img class="Work-image" src="{% static 'images/proyecto.jpg' %}" alt="Mejorando.la"/>
+                        <figcaption class="Work-description">Lo mejor de la WEB</figcaption>
+                    </figure>
+                </article>
+                <article class="Work-item">
+                    <figure class="Work-imageContainer">
+                        <img class="Work-image" src="{% static 'images/proyecto.jpg' %}" alt="Mejorando.la"/>
+                        <figcaption class="Work-description">Lo mejor de la WEB</figcaption>
+                    </figure>
+                </article>
+                <article class="Work-item">
+                    <figure class="Work-imageContainer">
+                        <img class="Work-image" src="{% static 'images/proyecto.jpg' %}" alt="Mejorando.la"/>
+                        <figcaption class="Work-description">Lo mejor de la WEB</figcaption>
+                    </figure>
+                </article>
+                <article class="Work-item">
+                    <figure class="Work-imageContainer">
+                        <img class="Work-image" src="images/proyecto.jpg" alt="Mejorando.la"/>
+                        <figcaption class="Work-description">Lo mejor de la WEB</figcaption>
+                    </figure>
+                </article>
+        </section>
+        <footer id="contacto" class="Footer">
+            <div class="Footer-left">
+                <h3 class="Footer-title">Contacto</h3>
+                <p class="Footer-description">Si quieres contratarme puedes escribirme en este pequeño formulario</p>
+            </div>
+            <form action="" class="Footer-form">
+                <input type="text" placeholder="Nombre" class="Footer-input">
+                <input type="email" placeholder="Email" class="Footer-input">
+                <textarea placeholder="motivo" class="Footer-textarea"></textarea>
+                <button type="submit" class="Footer-button">Contactarme</button>
+            </form>
+        </footer>
+    </body>
+</html>
+

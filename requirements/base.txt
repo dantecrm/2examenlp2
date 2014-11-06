@@ -1,0 +1,8 @@
+Django==1.7
+bpython
+django-braces
+django-model-utils
+logutils
+Pillow
+
+-e git+https://github.com/sehmaschine/django-grappelli.git@dev/2.6.x#egg=django-grappelli

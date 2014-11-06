@@ -1,0 +1,4 @@
+# Este archivo está aquí porque muchas plataformas como Servicio buscan los
+# requirements.txt en el directorio raíz del proyecto.
+
+-r requirements/production.txt

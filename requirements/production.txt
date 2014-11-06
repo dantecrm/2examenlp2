@@ -1,0 +1,4 @@
+#Solo se debe instalar esto cuando se pase a produccion
+-r base.txt
+
+gunicorn==18.0
