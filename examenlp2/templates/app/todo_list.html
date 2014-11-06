@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head_title %}Todo List{% endblock %}
+
+{% block extra_body %}
+<div class="panel panel-success">
+    <div class="panel-heading">Lista de acciones diarias</div>
+    <table class = "table">
+        <thead><tr><th>Title</th><th>Action</th></tr></thead>
+        <tbody>
+            {% for todo in todo_list %}
+            <tr><td>{% if perms.todo.view_todo %}<a href="{{app.get_absolute_url}}">{{todo}}</a>{% else %}{{todo}}{% endif %}</td>
+                <td>{% if perms.app.change_todo %}<button type="button"  class="btn btn-default"><a href="{% url 'app_update' todo.pk %}">Update</a></button>{% endif %}  {% if perms.app.delete_app %}<button type="button" class="btn btn-danger"><a href="{% url 'app_delete' todo.pk %}">Delete</a></button>{% endif %}</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

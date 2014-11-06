@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block head_title %}{{todo}}{% endblock %}
+
+{% block trabajo %}
+<ul>
+{% for item in porhacer %}
+
+    <li>{{ item }}</li>
+
+{% endfor %}
+
+</ul>
+{% endblock %}

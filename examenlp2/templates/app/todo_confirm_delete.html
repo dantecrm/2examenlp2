@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load url from future %}
+
+{% block head_title %}{{object_name}}Confirm delete?{% endblock %}
+
+{% block extra_body %}  
+<div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h3 class="text-center">Are you sure you want to delete {{object}}?</h3>
+            <form action="" method="post" class="form-group"
+                style="text-align: center;">{% csrf_token %}
+                <input type="submit" style="" class="btn btn-warning" value="Yes!"/>
+                <input type="button" value="No" class="btn btn-primary" onclick="window.history.go(-1);"/>
+            </form>         
+            <div class="modal-footer">
+                <div class="col-md-12"><a href="/">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button></a>
+                </div>	
+            </div>
+            </div>
+    </div>
+</div>
+{% endblock %}

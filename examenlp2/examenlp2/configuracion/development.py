@@ -6,7 +6,6 @@ from os.path import join, normpath
 
 from .base import *
 
-
 ########## DEBUG CONFIGURATION
 DEBUG = True
 
@@ -49,7 +48,11 @@ CACHES = {
 INSTALLED_APPS += (
     'debug_toolbar.apps.DebugToolbarConfig',
     'taggit',
-    'userprofiles',
+    'account',
+    'bootstrapform',
+    'eventlog',
+    'metron',
+    'app',
 )
 
 MIDDLEWARE_CLASSES += (

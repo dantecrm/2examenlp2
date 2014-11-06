@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}{{todo}}{% endblock %}
+
+{% block extra_body %}
+<table class="table table-bordered">
+<tr class="info"><th>Title:</th><td class="active">{{todo}}</td></tr>
+<tr class="info"><th>Owner:</th><td class="active">{{todo.owner}}</td></tr>
+<tr class="info"><th>Priority:</th><td class="active">{{todo.get_priority_display}}</td></tr>
+<tr class="info"><th>Added on:</th><td class="active">{{todo.added_on}}</td></tr>
+<tr class="info"><th>Due on:</th><td class="active">{{todo.due_on}}</td></tr>
+</table>
+{% if perms.app.change_app %}<a href="{% url 'app_update' todo.pk %}" class="btn btn-primary btn-lg active" >Update</a>{% endif %}  {% if perms.app.delete_app %}<a href="{% url 'app_delete' todo.pk %}" class="btn btn-warning">Delete</a>{% endif %}
+{% endblock %}

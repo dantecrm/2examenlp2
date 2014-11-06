@@ -1,106 +1,25 @@
-<!DOCTYPE html>
+{% extends "banner_base.html" %}
+{% load i18n %}
 
-{% load staticfiles %}
-
-<html lang="es">
-    <head>
-        <title>{% block title %}examenlp2{% endblock title %}</title>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
-        <link rel="stylesheet" href= "{% static 'css/estilos.css' %}"/>
-    </head>
-    <body>
-        <header id="yo" class="Header">
-            <nav class="MainMenu">
-                <ul class="MainMenu-list">
-                    <li class="MainMenu-item">
-                        <a class="MainMenu-link" href="#yo">Yo</a>
-                    </li>
-                    <li class="MainMenu-item">
-                        <a class="MainMenu-link" href="#perfil">Perfil</a>
-                    </li>
-                    <li class="MainMenu-item">
-                        <a class="MainMenu-link" href="#trabajo">Mi trabajo</a>
-                    </li>
-                    <li class="MainMenu-item">
-                        <a class="MainMenu-link" href="#contacto">Contáctame</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <figure class="Header-imageContainer">
-                <img src= "{% static 'images/avatar.jpg' %}" alt="@DanteCunurana" class="Header-image"/>
-                <figcaption class="Header-description">
-                    <a href="http://github.com/danterrc/" target="_blank" class="Header-link">@DanteCunurana</a>
-                </figcaption>
-                <p class="Header-name">Dante Cunurana Mamani</p>
-            </figure>
-        </header>
-        <section id="perfil" class="Profile">
-            <div class="u-containerDefault"> 
-                <h2 class="Profile-title u-title">Mi Perfil</h2>
-
-                <p class="Profile-description">Puedes <strong>visitar</strong> mis redes <span class="Profile-span">sociales</span> si quieres <em>seguirme</em></p>
-
-                <a class="Profile-link"
-                    href="http://github.com/danterrc/">DanteCunurana</a>
-
-                <a class="Profile-link"
-                    href="http://github.com/danterrc/">DanteCunurana</a>
-
-                <a class="Profile-link"
-                    href="http://github.com/danterrc/">DanteCunurana</a>
-            </div>
-        </section>
-        <section id="trabajo" class="Work">
-            <div class="u-containerDefault"> 
-                <h2 class="Work-title u-title">Mi Trabajo</h2>
-            </div>
-                <article class="Work-item">
-                    <figure class="Work-imageContainer">
-                        <img class="Work-image" src="{% static 'images/proyecto.jpg' %}" alt="Mejorando.la"/>
-                        <figcaption>Sitio de Mejorando.la</figcaption>
-                    </figure>
-                </article>
-                <article class="Work-item">
-                    <figure class="Work-imageContainer">
-                        <img class="Work-image" src="{% static 'images/proyecto.jpg' %}" alt="Mejorando.la"/>
-                        <figcaption class="Work-description">Lo mejor de la WEB</figcaption>
-                    </figure>
-                </article>
-                <article class="Work-item">
-                    <figure class="Work-imageContainer">
-                        <img class="Work-image" src="{% static 'images/proyecto.jpg' %}" alt="Mejorando.la"/>
-                        <figcaption class="Work-description">Lo mejor de la WEB</figcaption>
-                    </figure>
-                </article>
-                <article class="Work-item">
-                    <figure class="Work-imageContainer">
-                        <img class="Work-image" src="{% static 'images/proyecto.jpg' %}" alt="Mejorando.la"/>
-                        <figcaption class="Work-description">Lo mejor de la WEB</figcaption>
-                    </figure>
-                </article>
-                <article class="Work-item">
-                    <figure class="Work-imageContainer">
-                        <img class="Work-image" src="images/proyecto.jpg" alt="Mejorando.la"/>
-                        <figcaption class="Work-description">Lo mejor de la WEB</figcaption>
-                    </figure>
-                </article>
-        </section>
-        <footer id="contacto" class="Footer">
-            <div class="Footer-left">
-                <h3 class="Footer-title">Contacto</h3>
-                <p class="Footer-description">Si quieres contratarme puedes escribirme en este pequeño formulario</p>
-            </div>
-            <form action="" class="Footer-form">
-                <input type="text" placeholder="Nombre" class="Footer-input">
-                <input type="email" placeholder="Email" class="Footer-input">
-                <textarea placeholder="motivo" class="Footer-textarea"></textarea>
-                <button type="submit" class="Footer-button">Contactarme</button>
-            </form>
-        </footer>
-    </body>
-</html>
-
+{% block head_title %}Welcome to Account{% endblock %}
+{% block body %}
+    {% block banner %}
+<h1 style="color: #333fff; text-shadow: #555 2px 2px 3px">Todo CRUD/Permissions example!</h1>
+<div class="form-inline" role="form" style="color:while">
+    <button type="button" class="btn btn-primary">INDEX</button>
+    {% if perms.todo.add_todo %}
+    <button type="button" class="btn btn-default"><a href="{% url 'app_create' %}">Add Todo</a></button>{% endif %}
+    <hr/>
+</div>
+    {% if user.is_authenticated %}
+    <P><strong>Bienvenido a ESTA PAGINA espero que te guste</strong></p>
+    {% else %}
+        {% url "account_login" as login_url %}
+        {% url "account_signup" as signup_url %}
+        <p>You can <a href="{{ login_url }}" class="btn btn-default"
+                style="color: #000">Log In</a> or <a href="{{ signup_url }}" class="btn btn-primary">Sign Up</a> to try out the site.</p>
+        {% endif %}
+    {% endblock %}
+    {% block extra_body %}
+    {% endblock %}
+{% endblock %}

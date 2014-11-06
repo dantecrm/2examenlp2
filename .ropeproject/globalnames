@@ -1,6 +1,7 @@
-€}q(Uuserprofile.forms]q(U	LoginFormqUUserProfileFormqUTodoFormqUMyRegistrationFormqeU#examenlp2.configuracion.development]q(UDEBUG_TOOLBAR_PATCH_SETTINGSqUEMAIL_BACKENDq	UTEMPLATE_DEBUGq
-U	DATABASESqUDEBUGqUINTERNAL_IPSqUCACHESqeUuserprofile.models]qUUserProfileqaUexamenlp2.urls]qUurlpatternsqaUuserprofiles.models]q(UTodoqUUserProfileqeUuserprofile.views]q(U
-TodoDeleteqURegister_UserViewqU
-TodoUpdateqUProfileUserViewqUTodoListqU	LoginViewqU
-TodoCreateqU
-TodoDetailqeu.
+€}q(Uuserprofiles.conf]q(Uload_path_attrqUAccountAppConfqeUuserprofiles.signals]q(Usignup_code_usedqUpassword_changedqUsignup_code_sentqUuser_login_attemptq	Uuser_signed_upq
+Uemail_confirmedqUemail_confirmation_sentqUuser_logged_inqUuser_sign_up_attemptqeUuserprofiles.fields]q(UTimeZoneFieldqU	HAS_SOUTHqeUuserprofiles.utils]q(Uuser_displayqUdefault_redirectqUhandle_redirect_to_loginqUensure_safe_urlqeUuserprofile.views]q(U
+TodoDeleteqURegister_UserViewqU
+TodoUpdateqUProfileUserViewqUTodoListqU	LoginViewqU
+TodoCreateqU
+TodoDetailqeUuserprofile.forms]q (U	LoginFormq!UUserProfileFormq"UTodoFormq#UMyRegistrationFormq$eUuserprofiles.callbacks]q%(Uaccount_delete_expungeq&Uaccount_delete_markq'eU#examenlp2.configuracion.development]q((UDEBUG_TOOLBAR_PATCH_SETTINGSq)UEMAIL_BACKENDq*UTEMPLATE_DEBUGq+U	DATABASESq,UDEBUGq-UINTERNAL_IPSq.UCACHESq/eUuserprofiles.forms]q0(ULoginEmailFormq1ULoginUsernameFormq2U	LoginFormq3UPasswordResetFormq4UPasswordResetTokenFormq5UUserProfileFormq6UTodoFormq7UMyRegistrationFormq8UChangePasswordFormq9eUuserprofile.models]q:UUserProfileq;aUuserprofiles.managers]q<(UEmailConfirmationManagerq=UEmailAddressManagerq>eUuserprofiles.mixins]q?ULoginRequiredMixinq@aUuserprofiles.decorators]qAUlogin_requiredqBaUuserprofiles.mixin]qCULoginRequiredMixinqDaUuserprofiles.compat]qE(Uget_user_lookup_kwargsqFUget_user_modelqGUreceiverqHUAUTH_USER_MODELqIeUexamenlp2.urls]qJUurlpatternsqKaUuserprofiles.models]qL(Uuser_post_saveqMUAccountqNUSignupCodeResultqOUUserProfileqPUEmailConfirmationqQUAnonymousAccountqRUAccountDeletionqSU
+SignupCodeqTUEmailAddressqUUTodoqVeUuserprofiles.hooks]qW(UhooksetqXUAccountDefaultHookSetqYU	HookProxyqZeu.
